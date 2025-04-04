@@ -1,106 +1,142 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portafolio de Proyectos - Architecture Anomaly</title>
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background-color: #111;
-            color: white;
-        }
-
-        .header {
-            background-color: #333; /* Mismo tono que la franja superior del título principal */
-            color: white;
-            padding: 50px 0;
-            text-align: center;
-        }
-
-        .header a {
-            text-decoration: none;
-            color: white;
-        }
-
-        .header h1 {
-            margin: 0;
-            font-size: 36px;
-        }
-
-        .top-nav {
-            background-color: #555;
-            display: flex;
-            justify-content: center;
-            padding: 10px 0;
-        }
-
-        .top-nav a {
-            color: white;
-            text-decoration: none;
-            padding: 10px 20px;
-            margin: 0 10px;
-            transition: background-color 0.3s;
-        }
-
-        .top-nav a:hover {
-            background-color: #777;
-        }
-
-        .content {
-            padding: 40px;
-            max-width: 900px;
-            margin: 0 auto;
-            text-align: justify;
-        }
-
-        .footer {
-            background-color: #333; /* Mismo tono que la franja superior del título principal */
-            color: #fff;
-            padding: 20px;
-            text-align: center;
-        }
-
-        .footer a {
-            color: #fff;
-            text-decoration: none;
-        }
-
-        .footer p {
-            margin: 10px 0;
-            font-size: 14px;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contacto - Architecture Anomaly</title>
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      font-family: 'Helvetica Neue', sans-serif;
+      height: 100%;
+      color: white;
+    }
+    header {
+      background-color: #333;
+      padding: 3rem 2rem;
+      text-align: center;
+      width: 100%;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+      color: #fff;
+    }
+    nav {
+      background-color: #444;
+      padding: 1rem 2rem;
+      text-align: center;
+      width: 100%;
+    }
+    nav a {
+      margin: 0 15px;
+      text-decoration: none;
+      color: #fff;
+      font-size: 1rem;
+    }
+    .video-fondo {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: -1;
+    }
+    .formulario-container {
+      background-color: rgba(100, 100, 100, 0.4);
+      padding: 3rem;
+      margin: 4rem auto;
+      max-width: 600px;
+      border-radius: 10px;
+      text-align: left;
+    }
+    .formulario-container h2 {
+      text-align: center;
+    }
+    label {
+      display: block;
+      margin: 1rem 0 0.5rem;
+    }
+    input, textarea {
+      width: 100%;
+      padding: 0.5rem;
+      border: none;
+      border-radius: 5px;
+      font-size: 1rem;
+    }
+    button {
+      margin-top: 1rem;
+      background-color: #333;
+      color: white;
+      border: none;
+      padding: 0.7rem 1.5rem;
+      font-size: 1rem;
+      cursor: pointer;
+      border-radius: 5px;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    footer {
+      background-color: #333;
+      color: #aaa;
+      padding: 2rem;
+      font-size: 0.9rem;
+      text-align: center;
+    }
+    footer a {
+      color: #aaa;
+      text-decoration: none;
+      margin: 0 10px;
+    }
+  </style>
 </head>
 <body>
-    <div class="header">
-        <a href="index.html">
-            <h1>Architecture Anomaly</h1>
-        </a>
-    </div>
+  <video autoplay muted loop class="video-fondo">
+    <source src="VIDEO TRANSFORMACIÓN.mp4" type="video/mp4">
+    Tu navegador no soporta videos en HTML5.
+  </video>
 
-    <div class="top-nav">
-        <a href="index.html">Inicio</a>
-        <a href="cursos.html">Cursos</a>
-        <a href="asesorias.html">Asesorías</a>
-        <a href="portafolio.html">Portafolio</a>
-        <a href="contacto.html">Contacto</a>
-    </div>
+  <header>
+    <h1>Architecture Anomaly</h1>
+  </header>
 
-    <div class="content">
-        <h2>Portafolio de Proyectos</h2>
-        <p><strong>Architecture Anomaly</strong> es un estudio de diseño enfocado en arquitectura minimalista y sostenible, con experiencia en vivienda unifamiliar y multifamiliar, centros comerciales, oficinas, edificios institucionales, hoteles, entre otros. También brindamos asesorías en diseño y visualización arquitectónica.</p>
+  <nav>
+    <a href="index.html">Inicio</a>
+    <a href="bienvenido.html">Bienvenido</a>
+    <a href="cursos.html">Cursos</a>
+    <a href="asesorias.html">Asesorías</a>
+    <a href="portafolio.html">Portafolio de Proyectos</a>
+  </nav>
 
-        <p><strong>Muy pronto</strong> presentaremos aquí una selección de nuestros proyectos más representativos. Cada uno refleja nuestra visión sobre la historia, el minimalismo y la sostenibilidad en la arquitectura.</p>
-    </div>
+  <section class="formulario-container">
+    <h2>Contacto</h2>
+    <p>Tel: (+57) 3213376582 - Email: architectureanomaly@gmail.com<br>
+    Ubicación: Bogotá - Colombia</p>
 
-    <div class="footer">
-        <div>
-            <p>Síguenos en <a href="https://www.instagram.com/architectureanomaly/" target="_blank">Instagram</a></p>
-            <a href="terminos.html">Términos y Condiciones</a>
-        </div>
-        <p>© 2025 Architecture Anomaly. Todos los derechos reservados según la normativa colombiana.</p>
-    </div>
+    <form action="https://formspree.io/f/xwplryqg" method="POST">
+      <label for="nombre">Nombre</label>
+      <input type="text" id="nombre" name="nombre" required>
+
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="mensaje">Escribe tu mensaje aquí</label>
+      <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+
+      <button type="submit">Enviar</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>Síguenos en <a href="https://www.instagram.com/architectureanomaly/" target="_blank">Instagram</a></p>
+    <p>
+      <a href="https://www.sic.gov.co/marcas" target="_blank">Términos y Condiciones</a> |
+      <a href="https://www.derechodeautor.gov.co/" target="_blank">Copyright</a>
+    </p>
+    <p>&copy; 2025 Architecture Anomaly - Todos los derechos reservados.</p>
+  </footer>
 </body>
 </html>
