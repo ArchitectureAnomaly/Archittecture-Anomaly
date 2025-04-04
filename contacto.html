@@ -10,7 +10,6 @@
             margin: 0;
             padding: 0;
             font-family: 'Arial', sans-serif;
-            background-color: black;
             color: white;
         }
 
@@ -18,10 +17,22 @@
             display: flex;
             flex-direction: column;
             min-height: 100vh;
+            position: relative;
+            overflow: hidden;
+        }
+
+        video.bg-video {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
         }
 
         .header {
-            background-color: #222;
+            background-color: #111;
             padding: 50px 0;
             text-align: center;
             width: 100%;
@@ -30,7 +41,6 @@
         .header a {
             display: block;
             text-decoration: none;
-            color: white;
         }
 
         .site-title {
@@ -39,6 +49,7 @@
             margin: 0;
             padding: 10px 0;
             color: white;
+            text-decoration: none;
         }
 
         .top-nav {
@@ -62,25 +73,58 @@
 
         .content {
             flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
             padding: 50px;
-            background-image: url('IMG - 18.png');
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
         }
 
         .contact-message {
-            background-color: rgba(50, 50, 50, 0.85);
+            background-color: rgba(100, 100, 100, 0.4);
             padding: 30px;
             border-radius: 15px;
-            max-width: 750px;
-            margin: 0 auto;
+            max-width: 800px;
+            width: 100%;
             text-align: justify;
-            line-height: 1.4;
+            line-height: 1.5;
         }
 
         .contact-message p {
             margin: 10px 0;
+        }
+
+        form {
+            margin-top: 20px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            margin-bottom: 15px;
+            display: flex;
+            flex-direction: column;
+            color: white;
+        }
+
+        input, textarea {
+            padding: 10px;
+            border-radius: 5px;
+            border: none;
+            font-size: 16px;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #222;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #444;
         }
 
         .footer {
@@ -103,9 +147,16 @@
     </style>
 </head>
 <body>
-    <a href="index.html" class="header">
-        <div class="site-title">Architecture Anomaly</div>
-    </a>
+    <video class="bg-video" autoplay muted loop>
+        <source src="VIDEO TRANSFORMACIÓN.mp4" type="video/mp4">
+        Tu navegador no soporta video HTML5.
+    </video>
+
+    <div class="header">
+        <a href="index.html">
+            <div class="site-title">Architecture Anomaly</div>
+        </a>
+    </div>
 
     <div class="top-nav">
         <a href="index.html">Inicio</a>
@@ -117,10 +168,26 @@
 
     <div class="content">
         <div class="contact-message">
-            <p>¿Tienes una idea en mente? ¿Quieres trabajar con nosotros o necesitas una asesoría personalizada en diseño o visualización arquitectónica?</p>
-            <p>No dudes en escribirnos. Nos encanta escuchar nuevas propuestas y encontrar juntos soluciones arquitectónicas con sentido.</p>
-            <p>Escríbenos a: <strong>architectureanomaly@gmail.com</strong></p>
-            <p>También puedes seguirnos y contactarnos por <a href="https://www.instagram.com/architectureanomaly/" target="_blank" style="color:white; text-decoration:underline;">Instagram</a></p>
+            <p><strong>Contacto:</strong></p>
+            <p>Tel: (+57) 3213376582</p>
+            <p>Email: architectureanomaly@gmail.com</p>
+            <p>Ubicación: Bogotá - Colombia.</p>
+
+            <form action="https://formspree.io/f/xwplryqg" method="POST">
+                <label>
+                    Tu nombre:
+                    <input type="text" name="name" required>
+                </label>
+                <label>
+                    Tu email:
+                    <input type="email" name="email" required>
+                </label>
+                <label>
+                    Tu mensaje:
+                    <textarea name="message" rows="5" placeholder="Escribe tu mensaje aquí" required></textarea>
+                </label>
+                <button type="submit">Enviar</button>
+            </form>
         </div>
     </div>
 
