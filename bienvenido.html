@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Bienvenido a Architecture Anomaly</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Architecture Anomaly</title>
   <style>
     body {
       margin: 0;
@@ -32,27 +32,6 @@
       color: #fff;
       font-size: 1rem;
     }
-    .bienvenido {
-      background-image: url('POST2.png');
-      background-size: cover;
-      background-position: center center;
-      background-repeat: no-repeat;
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 4rem;
-    }
-    .bienvenido .contenido {
-      background-color: rgba(0, 0, 0, 0.35); /* menos oscuro */
-      padding: 3rem;
-      border-radius: 15px;
-      color: white;
-      font-size: 1.4rem;
-      max-width: 1000px;
-      text-align: justify;
-      backdrop-filter: blur(4px);
-    }
     footer {
       background-color: #111;
       color: #aaa;
@@ -64,13 +43,36 @@
       text-decoration: none;
       margin: 0 10px;
     }
+
+    .bienvenido {
+      background-image: url('POST2.png');
+      background-size: cover;
+      background-position: center center;
+      background-repeat: no-repeat;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 4rem;
+    }
+
+    .bienvenido .contenido, .bienvenido .filosofia {
+      background-color: rgba(0, 0, 0, 0.4);
+      padding: 2.5rem;
+      border-radius: 10px;
+      color: white;
+      font-size: 1.3rem;
+      max-width: 900px;
+      text-align: justify;
+      margin-top: 2rem;
+    }
   </style>
 </head>
 <body>
   <header>
     <h1>Architecture Anomaly</h1>
   </header>
-
   <nav>
     <a href="index.html">Inicio</a>
     <a href="cursos.html">Cursos</a>
@@ -81,6 +83,21 @@
     <div class="contenido">
       <p>
         Architecture Anomaly es un estudio de diseño que está enfocado en la arquitectura minimalista y sostenible, especialmente vivienda, vivienda multifamiliar de alta especificación, centros comerciales, edificios de oficinas, edificios institucionales, hoteles, entre otros. Ofrecemos consultorías personalizadas en diseño y visualización arquitectónica.
+      </p>
+    </div>
+
+    <div class="filosofia">
+      <p>
+        Creemos en una arquitectura que no necesita adornos innecesarios, porque cada línea, cada lleno y cada vacío hablan por sí mismos. Una arquitectura que, como el alma humana, resiste el tiempo aunque pierda pétalos.
+      </p>
+      <p>
+        En Architecture Anomaly exploramos la historia no como una nostalgia, sino como un cimiento. Escuchamos lo que nos dice la historia, aprendemos de su sabiduría y reimaginamos su esencia con una mirada minimalista, sobria y honesta.
+      </p>
+      <p>
+        Sostenible no solo en materiales, sino en pensamiento: diseñamos para durar, para cuidar, para vivir. Y sobre todo, diseñamos con emoción, porque entendemos que sin sentimiento no hay creación.
+      </p>
+      <p>
+        Cada espacio que concebimos es un manifiesto silencioso de una época, una historia nueva que nace desde el respeto por lo esencial.
       </p>
     </div>
   </section>
