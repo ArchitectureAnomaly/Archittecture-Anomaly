@@ -1,110 +1,154 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Architecture Anomaly</title>
-  <style>
-    body, html {
-      margin: 0;
-      padding: 0;
-      font-family: 'Helvetica Neue', sans-serif;
-      background-color: #000;
-      color: white;
-    }
-    header {
-      background-color: #000;
-      padding: 1rem;
-      text-align: center;
-    }
-    header h1 {
-      margin: 0;
-      font-size: 2.5rem;
-      color: white;
-    }
-    nav {
-      background-color: #444;
-      padding: 0.8rem;
-      text-align: center;
-    }
-    nav a {
-      margin: 0 15px;
-      text-decoration: none;
-      color: white;
-      font-size: 1rem;
-    }
-    .contenido {
-      padding: 3rem;
-      max-width: 900px;
-      margin: auto;
-      text-align: center;
-    }
-    .contenido h2 {
-      font-size: 2rem;
-      margin-bottom: 1rem;
-    }
-    .contenido p {
-      font-size: 1.2rem;
-      line-height: 1.6;
-    }
-    .seccion {
-      background-color: #222;
-      padding: 2rem;
-      margin: 2rem auto;
-      max-width: 900px;
-      border-radius: 10px;
-      text-align: center;
-    }
-    footer {
-      background-color: #111;
-      color: #aaa;
-      padding: 2rem;
-      font-size: 0.9rem;
-      text-align: center;
-    }
-    footer a {
-      color: #aaa;
-      text-decoration: none;
-      margin: 0 10px;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Architecture Anomaly</title>
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            background-color: black;
+            color: white;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        .header {
+            background-color: #333;
+            padding: 80px 0;
+            text-align: center;
+            width: 100%;
+        }
+
+        .site-title {
+            font-size: 48px;
+            font-weight: bold;
+            margin: 0;
+            padding: 15px 0;
+            text-decoration: none;
+            color: white;
+            display: block;
+        }
+
+        .top-nav {
+            background-color: #555;
+            display: flex;
+            justify-content: center;
+            padding: 10px 0;
+        }
+
+        .top-nav a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            margin: 0 10px;
+            transition: background-color 0.3s;
+        }
+
+        .top-nav a:hover {
+            background-color: #777;
+        }
+
+        .content {
+            margin: 0 auto;
+            width: 100%;
+            text-align: center;
+            flex: 1;
+            background-image: url('IMG - 18.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            padding: 50px 0;
+        }
+
+        .main-menu {
+            display: flex;
+            flex-direction: column;
+            margin: 30px auto;
+            width: 85%;
+        }
+
+        .main-menu-item {
+            background-color: #555;
+            padding: 30px;
+            margin: 15px 0;
+            text-align: center;
+            transition: background-color 0.3s;
+            border-radius: 15px;
+        }
+
+        .main-menu-item a {
+            color: white;
+            font-size: 20px;
+            text-decoration: none;
+            display: block;
+            font-weight: bold;
+        }
+
+        .main-menu-item:hover {
+            background-color: #777;
+        }
+
+        .footer {
+            background-color: #333;
+            padding: 20px 0;
+            text-align: center;
+            width: 100%;
+            margin-top: auto;
+        }
+
+        .footer a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        .footer p {
+            margin: 10px 0;
+            font-size: 14px;
+        }
+    </style>
 </head>
 <body>
-  <header>
-    <h1>Architecture Anomaly</h1>
-  </header>
+    <div class="header">
+        <a href="index.html" class="site-title">Architecture Anomaly</a>
+    </div>
 
-  <nav>
-    <a href="index.html">Inicio</a>
-    <a href="bienvenido.html">Bienvenido</a>
-    <a href="cursos.html">Cursos</a>
-    <a href="asesorias.html">Asesorías</a>
-    <a href="contacto.html">Contacto</a>
-  </nav>
+    <div class="top-nav">
+        <a href="index.html">Inicio</a>
+        <a href="cursos.html">Cursos</a>
+        <a href="asesorias.html">Asesorías</a>
+    </div>
 
-  <section class="seccion">
-    <h2>Bienvenido a Architecture Anomaly</h2>
-    <p>Explora nuestro mundo de arquitectura minimalista y sostenible.</p>
-  </section>
+    <div class="content">
+        <div class="main-menu">
+            <div class="main-menu-item">
+                <a href="bienvenido.html" style="display:block; background-color:#888; color:black; padding:2rem; margin:1rem 0; text-align:center; text-decoration:none;">
+                    Bienvenido a Architecture Anomaly
+                </a>
+            </div>
+            <div class="main-menu-item">
+                <a href="portafolio.html">Portafolio de Proyectos</a>
+            </div>
+            <div class="main-menu-item">
+                <a href="contacto.html">Contacto</a>
+            </div>
+        </div>
+    </div>
 
-  <section class="seccion">
-    <h2>Portafolio de Proyectos</h2>
-    <p>Muy pronto presentaremos aquí una selección de nuestros proyectos más representativos.</p>
-  </section>
-
-  <section class="seccion">
-    <h2>Contacto</h2>
-    <p>Tel: (+57) 3213376582 - Email: architectureanomaly@gmail.com</p>
-    <p>Ubicación: Bogotá - Colombia</p>
-  </section>
-
-  <footer>
-    <p>Síguenos en <a href="https://www.instagram.com/architectureanomaly/" target="_blank">Instagram</a></p>
-    <p>
-      <a href="https://www.sic.gov.co/marcas" target="_blank">Términos y Condiciones</a> |
-      <a href="https://www.derechodeautor.gov.co/" target="_blank">Copyright</a>
-    </p>
-    <p>&copy; 2025 Architecture Anomaly - Todos los derechos reservados.</p>
-  </footer>
+    <div class="footer">
+        <div>
+            <p>Síguenos en <a href="https://www.instagram.com/architectureanomaly/" target="_blank">Instagram</a></p>
+            <a href="terminos.html">Términos y Condiciones</a>
+        </div>
+        <p>© 2025 Architecture Anomaly. Todos los derechos reservados según la normativa colombiana.</p>
+    </div>
 </body>
 </html>
