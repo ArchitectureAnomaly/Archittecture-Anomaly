@@ -70,34 +70,55 @@
 
         .main-menu {
             display: flex;
-            flex-direction: row;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 30px;
+            flex-direction: column;
             margin: 30px auto;
             width: 85%;
         }
 
         .main-menu-item {
-            background-color: #555;
-            padding: 30px;
-            text-align: center;
-            transition: background-color 0.3s;
+            position: relative;
+            height: 200px;
+            margin: 15px 0;
             border-radius: 15px;
-            width: 280px;
+            overflow: hidden;
+        }
+
+        .main-menu-item::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+            opacity: 0.4;
+        }
+
+        .main-menu-item.bienvenido::before {
+            background-image: url('IMG - 1.png');
+        }
+
+        .main-menu-item.portafolio::before {
+            background-image: url('RENDER 1.png');
+        }
+
+        .main-menu-item.contacto::before {
+            background-image: url('IMG - 2.png');
         }
 
         .main-menu-item a {
+            position: relative;
             color: white;
-            font-size: 20px;
+            font-size: 24px;
             text-decoration: none;
-            display: block;
             font-weight: bold;
-            padding: 2rem;
-        }
-
-        .main-menu-item:hover {
-            background-color: #777;
+            z-index: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.4);
         }
 
         .footer {
@@ -133,13 +154,13 @@
 
     <div class="content">
         <div class="main-menu">
-            <div class="main-menu-item">
+            <div class="main-menu-item bienvenido">
                 <a href="bienvenido.html">Bienvenido a Architecture Anomaly</a>
             </div>
-            <div class="main-menu-item">
+            <div class="main-menu-item portafolio">
                 <a href="portafolio.html">Portafolio de Proyectos</a>
             </div>
-            <div class="main-menu-item">
+            <div class="main-menu-item contacto">
                 <a href="contacto.html">Contacto</a>
             </div>
         </div>
