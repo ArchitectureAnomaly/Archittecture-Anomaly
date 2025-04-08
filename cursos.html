@@ -1,24 +1,134 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Cursos - Architecture Anomaly</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cursos - Architecture Anomaly</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background-color: black;
+            color: white;
+        }
+
+        .header {
+            background-color: #333;
+            padding: 50px 0;
+            text-align: center;
+        }
+
+        .site-title {
+            font-size: 36px;
+            font-weight: bold;
+            color: white;
+            text-decoration: none;
+        }
+
+        .top-nav {
+            background-color: #444;
+            display: flex;
+            justify-content: center;
+            padding: 10px 0;
+        }
+
+        .top-nav a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+        }
+
+        .top-nav a:hover {
+            background-color: #666;
+        }
+
+        .content {
+            padding: 40px;
+            max-width: 1200px;
+            margin: auto;
+            background-color: rgba(50, 50, 50, 0.9);
+            border-radius: 15px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 40px;
+        }
+
+        .card {
+            position: relative;
+            overflow: hidden;
+            border-radius: 10px;
+        }
+
+        .card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover img {
+            transform: scale(1.05);
+        }
+
+        .card a {
+            display: block;
+            width: 100%;
+            height: 100%;
+        }
+
+        .footer {
+            background-color: #333;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        .footer a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .footer p {
+            font-size: 14px;
+            margin: 10px 0;
+        }
+    </style>
 </head>
 <body>
-  <header>
-    <h1>Cursos</h1>
-  </header>
-  <nav>
-    <a href="index.html">Inicio</a>
-  </nav>
+    <div class="header">
+        <a href="index.html" class="site-title">Architecture Anomaly</a>
+    </div>
 
-  <section>
-    <p>Explora nuestros cursos especializados en arquitectura y visualización.</p>
-  </section>
+    <div class="top-nav">
+        <a href="index.html">Inicio</a>
+        <a href="cursos.html">Cursos</a>
+        <a href="asesorias.html">Asesorías</a>
+        <a href="portafolio.html">Portafolio</a>
+        <a href="contacto.html">Contacto</a>
+    </div>
 
-  <footer>
-    <p>&copy; 2025 Architecture Anomaly - Todos los derechos reservados.</p>
-  </footer>
+    <div class="content">
+        <h2>Cursos</h2>
+        <p>Muy pronto encontrarás aquí nuestra oferta de cursos sobre arquitectura minimalista, historia y sostenibilidad. Diseñados para profesionales, estudiantes y apasionados por el diseño que buscan nuevas formas de pensar y construir.</p>
+
+        <div class="grid">
+            <div class="card"><a href="proyecto1.html"><img src="32-1.png" alt="Proyecto 1"></a></div>
+            <div class="card"><a href="proyecto2.html"><img src="IMG - 1.png" alt="Proyecto 2"></a></div>
+            <div class="card"><a href="proyecto3.html"><img src="IMG - 3.png" alt="Proyecto 3"></a></div>
+            <div class="card"><a href="proyecto4.html"><img src="IMG - 18.png" alt="Proyecto 4"></a></div>
+            <div class="card"><a href="proyecto5.html"><img src="IMG34.png" alt="Proyecto 5"></a></div>
+            <div class="card"><a href="proyecto6.html"><img src="RD22-1.png" alt="Proyecto 6"></a></div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>Síguenos en <a href="https://www.instagram.com/architectureanomaly/" target="_blank">Instagram</a></p>
+        <a href="terminos.html">Términos y Condiciones</a>
+        <p>© 2025 Architecture Anomaly. Todos los derechos reservados según la normativa colombiana.</p>
+    </div>
 </body>
 </html>
