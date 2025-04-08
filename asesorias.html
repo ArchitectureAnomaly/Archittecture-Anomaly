@@ -1,24 +1,114 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Asesorías - Architecture Anomaly</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asesorías - Architecture Anomaly</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background-color: black;
+            color: white;
+        }
+
+        .header {
+            background-color: #333;
+            padding: 50px 0;
+            text-align: center;
+        }
+
+        .site-title {
+            font-size: 36px;
+            font-weight: bold;
+            color: white;
+            text-decoration: none;
+        }
+
+        .top-nav {
+            background-color: #444;
+            display: flex;
+            justify-content: center;
+            padding: 10px 0;
+        }
+
+        .top-nav a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+        }
+
+        .top-nav a:hover {
+            background-color: #666;
+        }
+
+        .content {
+            padding: 40px;
+            max-width: 800px;
+            margin: auto;
+            background-color: rgba(50, 50, 50, 0.9);
+            border-radius: 15px;
+        }
+
+        .content h2, .content h3 {
+            text-align: center;
+        }
+
+        .footer {
+            background-color: #333;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        .footer a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .footer p {
+            font-size: 14px;
+            margin: 10px 0;
+        }
+    </style>
 </head>
 <body>
-  <header>
-    <h1>Asesorías</h1>
-  </header>
-  <nav>
-    <a href="index.html">Inicio</a>
-  </nav>
+    <div class="header">
+        <a href="index.html" class="site-title">Architecture Anomaly</a>
+    </div>
 
-  <section>
-    <p>Agenda una asesoría con nosotros para potenciar tus proyectos arquitectónicos.</p>
-  </section>
+    <div class="top-nav">
+        <a href="index.html">Inicio</a>
+        <a href="cursos.html">Cursos</a>
+        <a href="asesorias.html">Asesorías</a>
+        <a href="portafolio.html">Portafolio</a>
+        <a href="contacto.html">Contacto</a>
+    </div>
 
-  <footer>
-    <p>&copy; 2025 Architecture Anomaly - Todos los derechos reservados.</p>
-  </footer>
+    <div class="content">
+        <h2>Asesorías</h2>
+        <p>Ofrecemos asesorías personalizadas en diseño arquitectónico, representación gráfica, concursos y portafolios. Acompañamos procesos creativos y técnicos desde la idea inicial hasta la visualización final del proyecto.</p>
+
+        <div style="margin-top: 40px;">
+            <h3>Agenda tu asesoría:</h3>
+            <div style="min-width:320px;height:700px;" id="schedule_form_embed"></div>
+            <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+            <script type="text/javascript">
+                window.onload = function() {
+                    Calendly.initInlineWidget({
+                        url: 'https://calendly.com/architectureanomaly',
+                        parentElement: document.getElementById('schedule_form_embed'),
+                        prefill: {},
+                        utm: {}
+                    });
+                };
+            </script>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>Síguenos en <a href="https://www.instagram.com/architectureanomaly/" target="_blank">Instagram</a></p>
+        <a href="terminos.html">Términos y Condiciones</a>
+        <p>© 2025 Architecture Anomaly. Todos los derechos reservados según la normativa colombiana.</p>
+    </div>
 </body>
 </html>
