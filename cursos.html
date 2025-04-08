@@ -44,42 +44,10 @@
 
         .content {
             padding: 40px;
-            max-width: 1200px;
+            max-width: 800px;
             margin: auto;
             background-color: rgba(50, 50, 50, 0.9);
             border-radius: 15px;
-            text-align: center;
-        }
-
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-            margin-top: 40px;
-        }
-
-        .card {
-            position: relative;
-            overflow: hidden;
-            border-radius: 10px;
-        }
-
-        .card img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            display: block;
-            transition: transform 0.3s ease;
-        }
-
-        .card:hover img {
-            transform: scale(1.05);
-        }
-
-        .card a {
-            display: block;
-            width: 100%;
-            height: 100%;
         }
 
         .footer {
@@ -113,15 +81,32 @@
     </div>
 
     <div class="content">
-        <h2 style="text-align: center;">Cursos</h2>
-
-        <div class="grid">
-            <div class="card"><a href="proyecto1.html"><img src="32-1.png" alt="Proyecto 1"></a></div>
-            <div class="card"><a href="proyecto2.html"><img src="IMG - 1.png" alt="Proyecto 2"></a></div>
-            <div class="card"><a href="proyecto3.html"><img src="IMG - 3.png" alt="Proyecto 3"></a></div>
-            <div class="card"><a href="proyecto4.html"><img src="IMG - 18.png" alt="Proyecto 4"></a></div>
-            <div class="card"><a href="proyecto5.html"><img src="POST2.png" alt="Proyecto 5"></a></div>
-            <div class="card"><a href="proyecto6.html"><img src="RD22-1.png" alt="Proyecto 6"></a></div>
+        <h2 style="text-align:center;">Cursos</h2>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px;">
+            <div style="position: relative;">
+                <img src="32-1.png" alt="Proyecto 1" style="width: 100%; border-radius: 10px;">
+                <div style="position: absolute; bottom: 10px; left: 0; right: 0; background-color: rgba(0,0,0,0.6); color: white; text-align: center; padding: 10px; border-radius: 0 0 10px 10px;">Curso de Photoshop para Arquitectos</div>
+            </div>
+            <div style="position: relative;">
+                <img src="IMG - 1.png" alt="Proyecto 2" style="width: 100%; border-radius: 10px;">
+                <div style="position: absolute; bottom: 10px; left: 0; right: 0; background-color: rgba(0,0,0,0.6); color: white; text-align: center; padding: 10px; border-radius: 0 0 10px 10px;">Curso de AutoCAD para Arquitectos</div>
+            </div>
+            <div style="position: relative;">
+                <img src="IMG - 3.png" alt="Proyecto 3" style="width: 100%; border-radius: 10px;">
+                <div style="position: absolute; bottom: 10px; left: 0; right: 0; background-color: rgba(0,0,0,0.6); color: white; text-align: center; padding: 10px; border-radius: 0 0 10px 10px;">Curso de Illustrator para Arquitectos</div>
+            </div>
+            <div style="position: relative;">
+                <img src="IMG - 18.png" alt="Proyecto 4" style="width: 100%; border-radius: 10px;">
+                <div style="position: absolute; bottom: 10px; left: 0; right: 0; background-color: rgba(0,0,0,0.6); color: white; text-align: center; padding: 10px; border-radius: 0 0 10px 10px;">Curso de InDesign y Diagramación para Arquitectos</div>
+            </div>
+            <div style="position: relative;">
+                <img src="POST2.png" alt="Proyecto 5" style="width: 100%; border-radius: 10px;">
+                <div style="position: absolute; bottom: 10px; left: 0; right: 0; background-color: rgba(0,0,0,0.6); color: white; text-align: center; padding: 10px; border-radius: 0 0 10px 10px;">Curso de Revit para Arquitectos</div>
+            </div>
+            <div style="position: relative;">
+                <img src="IMG34.png" alt="Proyecto 6" style="width: 100%; border-radius: 10px;">
+                <div style="position: absolute; bottom: 10px; left: 0; right: 0; background-color: rgba(0,0,0,0.6); color: white; text-align: center; padding: 10px; border-radius: 0 0 10px 10px;">Curso de Renderizado Profesional para Arquitectos</div>
+            </div>
         </div>
     </div>
 
