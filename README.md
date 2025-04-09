@@ -1,54 +1,22 @@
-# Archittecture-Anomaly
-Exploramos la historia, el minimalismo y la sostenibilidad en la arquitectura. Consultorías personalizadas en diseño arquitectónico. Venta de renders personalizados para proyectos.
-# Architecture Anomaly
+# Architecture Anomaly - Backend Flask
 
-Sitio web profesional para Architecture Anomaly, un estudio de diseño enfocado en arquitectura minimalista y sostenible.
+Este backend permite manejar la verificación de pagos para asesorías usando PayPal, y muestra automáticamente el formulario de agendamiento una vez el pago se haya confirmado.
 
-## Características
+## 📦 Endpoints
 
-- Diseño moderno y minimalista
-- Interfaz responsive
-- Navegación intuitiva
-- Secciones para portafolio, cursos y asesorías
-- Integración con redes sociales
+- `POST /paypal-webhook`  
+  Endpoint donde PayPal enviará la notificación de pago (requiere configuración en PayPal Developer).
 
-## Tecnologías
+- `GET /verificar-pago`  
+  Devuelve `{ "confirmado": true | false }` para que el frontend sepa si mostrar el formulario de agenda.
 
-- React
-- TypeScript
-- Tailwind CSS
-- Vite
-- React Router
-- Lucide React
+## 🚀 Despliegue Recomendado
 
-## Desarrollo Local
+- [Render](https://render.com)
+- [Railway](https://railway.app)
 
-1. Clonar el repositorio:
-```bash
-git clone https://github.com/tu-usuario/architecture-anomaly.git
-```
+## ⚙️ Requisitos
 
-2. Instalar dependencias:
-```bash
-cd architecture-anomaly
-npm install
-```
-
-3. Iniciar servidor de desarrollo:
-```bash
-npm run dev
-```
-
-## Estructura del Proyecto
-
-```
-src/
-  ├── components/     # Componentes reutilizables
-  ├── pages/         # Páginas de la aplicación
-  ├── App.tsx        # Componente principal
-  └── main.tsx       # Punto de entrada
-```
-
-## Licencia
-
-© 2025 Architecture Anomaly. Todos los derechos reservados según la normativa colombiana.
+- Python 3.8+
+- Archivo `Procfile` con `web: gunicorn app:app`
+- Dependencias listadas en `requirements.txt`
