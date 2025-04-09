@@ -1,0 +1,60 @@
+from zipfile import ZipFile
+from pathlib import Path
+
+# Crear estructura de un proyecto Flask para backend PayPal
+project_path = Path("/mnt/data/architecture-anomaly-flask")
+project_path.mkdir(parents=True, exist_ok=True)
+
+# Estructura y archivos
+files = {
+    "app.py": """
+from flask import Flask, request, jsonify
+
+app = Flask(__name__)
+
+# Simulador de verificación de pago (esto normalmente va en una DB)
+pago_confirmado = {"confirmado": False}
+
+@app.route("/paypal-webhook", methods=["POST"])
+def paypal_webhook():
+    data = request.json
+    if data.get("resource", {}).get("status") == "COMPLETED":
+        pago_confirmado["confirmado"] = True
+        print("✅ Pago confirmado")
+    return "", 200
+
+@app.route("/verificar-pago", methods=["GET"])
+def verificar_pago():
+    return jsonify(pago_confirmado)
+
+if __name__ == "__main__":
+    app.run(debug=True)
+""",
+    "requirements.txt": "flask\n",
+    "Procfile": "web: python app.py\n",
+    "README.md": """
+# Architecture Anomaly - Backend Flask
+
+Este backend permite verificar pagos realizados vía PayPal.
+
+## Endpoints
+- `/paypal-webhook`: Recibe las notificaciones IPN de PayPal.
+- `/verificar-pago`: Responde con `{ "confirmado": true/false }`.
+
+## Despliegue recomendado
+- Railway (https://railway.app)
+- Render (https://render.com)
+"""
+}
+
+# Escribir los archivos
+for filename, content in files.items():
+    (project_path / filename).write_text(content.strip(), encoding="utf-8")
+
+# Comprimir en .zip
+zip_output = "/mnt/data/architecture-anomaly-flask.zip"
+with ZipFile(zip_output, "w") as zipf:
+    for path in project_path.rglob("*"):
+        zipf.write(path, path.relative_to(project_path))
+
+zip_output
