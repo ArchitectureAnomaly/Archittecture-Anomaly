@@ -54,6 +54,20 @@
       text-align: center;
     }
 
+    #agendamiento {
+      display: none;
+      margin-top: 30px;
+      background-color: rgba(255, 255, 255, 0.1);
+      padding: 20px;
+      border-radius: 10px;
+    }
+
+    iframe {
+      width: 100%;
+      height: 800px;
+      border: none;
+    }
+
     .footer {
       background-color: #333;
       text-align: center;
@@ -89,11 +103,15 @@
     <p style="text-align: justify;">Ofrecemos asesorías personalizadas en arquitectura sostenible, enfocadas en diseño conceptual, representación gráfica, desarrollo de portafolios, concursos de arquitectura, visualización 3D, creación de presupuestos, prefactibilidades, análisis de precios unitarios, procesos constructivos y seguimientos de obra. Agenda tu sesión para recibir acompañamiento profesional en cualquiera de estas áreas.</p>
 
     <div style="margin-top: 40px;">
-      <p style="text-align: justify; color: #ffcc00; font-weight: bold;">*Nota importante:* Para poder agendar una asesoría es necesario realizar previamente el pago correspondiente. Al completar el pago serás redirigido automáticamente al formulario de agendamiento.</p>
+      <p style="text-align: justify; color: #0070ba; font-weight: bold;">*Nota importante:* Para poder agendar una asesoría es necesario realizar previamente el pago correspondiente. Al confirmar el pago, el formulario de agendamiento se mostrará automáticamente.</p>
       <p style="text-align: center; margin: 20px 0;">
-        <a href="https://pay.hotmart.com/YOUR_HOTMART_LINK" target="_blank" style="background-color: #f27624; color: white; padding: 12px 20px; border-radius: 5px; text-decoration: none; font-weight: bold;">Pagar con Hotmart</a>
+        <a id="pago" href="https://www.paypal.com/invoice/p/#84NM7VRSS2K9LHJ7" target="_blank" style="background-color: #0070ba; color: white; padding: 12px 20px; border-radius: 5px; text-decoration: none; font-weight: bold;">Pagar con PayPal</a>
       </p>
-      <p style="text-align: center; color: lightgreen; font-style: italic;">Después de realizar el pago, serás redirigido automáticamente para agendar tu asesoría.</p>
+    </div>
+
+    <div id="agendamiento">
+      <h3 style="text-align: center;">Agenda tu asesoría:</h3>
+      <iframe src="https://koalendar.com/e/meet-with-architecture-anomaly"></iframe>
     </div>
   </div>
 
@@ -102,5 +120,25 @@
     <a href="terminos.html">Términos y Condiciones</a>
     <p>© 2025 Architecture Anomaly. Todos los derechos reservados según la normativa colombiana.</p>
   </div>
+
+  <script>
+  async function verificarPago() {
+    try {
+      const res = await fetch('https://TUDOMINIO/render/verificar-pago');
+      const data = await res.json();
+      if (data.confirmado) {
+        document.getElementById("agendamiento").style.display = "block";
+      } else {
+        alert("El pago aún no ha sido confirmado. Espera unos minutos o vuelve a intentarlo.");
+      }
+    } catch (e) {
+      alert("Error al verificar el pago. Intenta más tarde.");
+    }
+  }
+
+  document.getElementById("pago").addEventListener("click", function () {
+    setTimeout(verificarPago, 6000); // Espera 6 seg antes de consultar
+  });
+</script>
 </body>
 </html>
